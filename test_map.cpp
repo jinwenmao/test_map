@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 //iterator _Where = this->lower_bound(_Keyval);
 	//map::iterator test ;
 	map<string,int>::_Pairib test;
-	 test = myMap.insert(pair<string, int>("a", 1)); 
+//	 test = myMap.insert(pair<string, int>("a", 1)); 
 test =	myMap.insert(pair<string, int>("b", 2)); 
 	test = myMap.insert(pair<string, int>("c", 3)); // 遍历刚刚建的表 
 	if (!test.second)
@@ -30,11 +30,14 @@ test =	myMap.insert(pair<string, int>("b", 2));
 		return -1;
 	}
 	test = myMap.insert(pair<string, int>("c", 300)); // 遍历刚刚建的表 
-		if (!test.second)
-	{
-		return -1;
-	}
+// 		if (!test.second)
+// 	{
+// 		return -1;
+// 	}
 	test = myMap.insert(pair<string, int>("c", 600)); // 遍历刚刚建的表 
+
+	myMap["c"] =900;
+		 test = myMap.insert(pair<string, int>("a", 1)); 
 //	test.second 
 	
 	map<string,int>::iterator it; 
